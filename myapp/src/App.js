@@ -1,13 +1,8 @@
-import React from "react";
-import Message from "./components/message";
-import List from "./components/List";
 import Button from "./components/Button";
 
-
-function App()
+export default function App() 
 {
-  return <div><Message/><List /><Button />
-  </div>
-}
+  return(
+    <Button/>  )
 
-export default App;
+}

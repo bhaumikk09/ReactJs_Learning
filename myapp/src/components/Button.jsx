@@ -1,16 +1,31 @@
-import React from 'react'
-import { useState } from 'react';
+import { useState } from "react";
 
 const Button = () => {
 
-  // const [count,setState] = useState(0);
+  const[count,setCount]=useState(0);
 
-  return (
-    <button onClick={()=>console.log("Clicked")
-    }>
-      Click Me
-    </button>
-  );
-}
+  function handleClick ()
+  {
+      
+    setCount (count+1);
 
-export default Button
+      
+
+    };
+
+    return (
+      <>
+      <button onClick={handleClick}>
+        Click Me
+
+      </button>
+      <p>Clicked {count}</p>
+      </>
+    );
+    
+  };
+  
+
+
+
+export default Button;
