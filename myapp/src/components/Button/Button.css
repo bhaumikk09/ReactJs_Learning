@@ -1,0 +1,13 @@
+.btn{
+    padding: 12px 16px;
+    margin: 2px;
+    border-radius: 4px;
+    border: 1px;
+    background-color: blue;
+}
+
+.btn-primary{
+    color: aliceblue;
+    font-family: arial,sans-serif;
+    font-size: 10px;
+}
