@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Button.css";
 
 const Button = () => {
 
@@ -12,7 +13,7 @@ const Button = () => {
   };
 
     return (
-      <button onClick={handleClick}>
+      <button className="btn" onClick={handleClick}>
         Click Me
       </button>
 
