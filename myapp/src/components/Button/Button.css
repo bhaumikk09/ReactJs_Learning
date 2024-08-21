@@ -1,13 +1,16 @@
 .btn{
-    padding: 12px 16px;
-    margin: 2px;
+    padding: 6px;
     border-radius: 4px;
     border: 1px;
-    background-color: blue;
+    background-color: navy;
+    color: white;
+    font-family: arial,sans-serif;
+    font-size: 20px;
+     
+    
 }
 
-.btn-primary{
-    color: aliceblue;
-    font-family: arial,sans-serif;
-    font-size: 10px;
+button:hover{
+        color: white;
+        background-color: black;
 }
