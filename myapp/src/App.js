@@ -1,6 +1,5 @@
-import Button from "./components/Button/Button";
-import { CiHeadphones } from "react-icons/ci";
-import Message from "./components/Message";
+
+import Like from "./components/Like";
 
 
 
@@ -8,10 +7,7 @@ export default function App()
 {
   return(
     <>
-    <CiHeadphones />
-    <Button/>
-
-    <Message/>
+    <Like/>
     </>
       )
 
