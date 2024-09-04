@@ -1,14 +1,22 @@
+import { useState } from "react";
 
-import Like from "./components/Like";
+export default function App() {
+  const [drink, setDrink] = useState({
+    title: "Coffee",
+    price: 1,
+  });
 
-
-
-export default function App() 
-{
-  return(
+  const handleClick = () => {
+    const newDrink = {
+      title: drink.title,
+      price: 2,
+    };
+    setDrink(newDrink);
+  };
+  return (
     <>
-    <Like/>
+      {drink.price}
+      <button onClick={handleClick}>Click here</button>
     </>
-      )
-
+  );
 }
