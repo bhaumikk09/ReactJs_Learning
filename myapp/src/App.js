@@ -1,17 +1,21 @@
 import { useState } from "react";
 
 export default function App() {
-  const [drink, setDrink] = useState({
-    title: "Coffee",
-    price: 1,
-  });
+  const [item, setItem] = useState(["matchbox", "knife"]);
 
   const handleClick = () => {
-    setDrink({ ...drink, price: 3 });
+    setItem([...item, "biscuit"]);
+
+    setItem(item.map((item) => (item === "knife" ? "cutter" : item)));
   };
   return (
     <>
-      {drink.price}
+      <ul>
+        {item.map((item, index) => (
+          // Map over the array and return a JSX element for each item
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
       <button onClick={handleClick}>Click here</button>
     </>
   );
