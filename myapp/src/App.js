@@ -7,11 +7,7 @@ export default function App() {
   });
 
   const handleClick = () => {
-    const newDrink = {
-      title: drink.title,
-      price: 2,
-    };
-    setDrink(newDrink);
+    setDrink({ ...drink, price: 3 });
   };
   return (
     <>
