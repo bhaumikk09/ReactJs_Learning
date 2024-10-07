@@ -1,22 +1,29 @@
-import { useState } from "react";
+// import { useState } from "react";
+import Title from "./components/Title";
 
 export default function App() {
-  const [item, setItem] = useState(["matchbox", "knife"]);
 
-  const handleClick = () => {
-    setItem([...item, "biscuit"]);
+  
+  // const [item, setItem] = useState(["matchbox", "knife"]);
 
-    setItem(item.map((item) => (item === "knife" ? "cutter" : item)));
-  };
+  // const handleClick = () => {
+  //   setItem([...item, "biscuit"]);
+
+  //   setItem(item.map((item) => (item === "knife" ? "cutter" : item)));
+  // };
   return (
-    <>
-      <ul>
-        {item.map((item, index) => (
-          // Map over the array and return a JSX element for each item
-          <li key={index}>{item}</li>
-        ))}
-      </ul>
-      <button onClick={handleClick}>Click here</button>
-    </>
-  );
+        <div>
+          <Title title="Hello Props" description="Implemented props in Javascript"></Title>
+        </div>
+    // <>
+    //   <ul>
+    //     {item.map((item, index) => (
+    //       // Map over the array and return a JSX element for each item
+    //       <li key={index}>{item}</li>
+    //     ))}
+    //   </ul>
+    //   <button onClick={handleClick}>Click here</button>
+    //</>
+   );
+  
 }
