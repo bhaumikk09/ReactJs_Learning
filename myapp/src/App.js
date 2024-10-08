@@ -1,29 +1,18 @@
-// import { useState } from "react";
-import Title from "./components/Title";
+import { useState } from "react";
+import NavBar from "./components/NavBar";
+import Cart from "./components/Cart";
+// import Title from "./components/Title";
 
 export default function App() {
 
-  
-  // const [item, setItem] = useState(["matchbox", "knife"]);
+const [cartItems,setCartItems] = useState(['Product1','Product2']);
 
-  // const handleClick = () => {
-  //   setItem([...item, "biscuit"]);
-
-  //   setItem(item.map((item) => (item === "knife" ? "cutter" : item)));
-  // };
   return (
         <div>
-          <Title title="Hello Props" description="Implemented props in Javascript"></Title>
+          <NavBar cartItemsCount={cartItems.length}/>
+          <Cart cartItems={cartItems}/>
         </div>
-    // <>
-    //   <ul>
-    //     {item.map((item, index) => (
-    //       // Map over the array and return a JSX element for each item
-    //       <li key={index}>{item}</li>
-    //     ))}
-    //   </ul>
-    //   <button onClick={handleClick}>Click here</button>
-    //</>
+   
    );
   
 }
