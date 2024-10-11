@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 const Form = () => {
+  const nameRef = useRef(null)
+  const ageRef = useRef(null)
+
   const handleSubmit = (event ) =>{
     
     event.preventDefault();
-    console.log('Submitted');
+    if (nameRef.current !== null)
+      console.log(nameRef.current.value);
+    if (ageRef.current !== null)
+      console.log(ageRef.current.value);
+      
     
   }
   
@@ -14,14 +21,14 @@ const Form = () => {
             <label htmlFor='name' className='form-lable'>
             Name :
             </label>
-            <input id='name' type='text' className='form-control'>
+            <input ref={nameRef} id='name' type='text' className='form-control'>
             </input>
         </div>
         <div className='mb-3'>
             <label htmlFor='age' className='form-lable'>
             Age :
             </label>
-            <input id='age' type='number' className='form-control'>
+            <input ref={ageRef} id='age' type='number' className='form-control'>
             </input>
         </div>
         <button className="btn" type='submit'>Submit</button>
