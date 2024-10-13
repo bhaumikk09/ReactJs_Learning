@@ -6,7 +6,6 @@ justify-content: center;
 }
 
 form{
-  border: 2px solid black;
   margin: 5px;
   padding: 5px;
   border-radius: 3px;
@@ -19,9 +18,12 @@ form{
 
 label{
   font-size: 20px;
+  font-weight: 400;
   font-family: sans-serif,Arial;
   margin-bottom: 3px;
   padding-bottom: 3px;
+  align-self: start;
+  justify-content: space-around;
 }
 
 div{
@@ -34,11 +36,17 @@ input{
   width: 100%;
   border: 0.5px solid black;
   border-radius:  5px; 
-  height: 20px;
+  height: 25px;
+
 }
 
 button{
-  width: 40%;
-  
+  width: 50%;
+  background-color: rgb(96, 96, 249);
+  font-size: 20px;
+  border: 1px;
+  border-radius: 4px;
+  justify-content: center;
+  box-shadow: 0 0 0 0.5px;
   
 }
