@@ -1,31 +1,27 @@
-import React, { useState } from 'react'
+import React from 'react'
+import {useForm} from 'react-hook-form'
 
 const Form =  ()=>{
-  const [person,setPerson] = useState({
-    name:'',
-    age:''
-  })
-  const handleSubmit = (event ) =>{
-    
-    event.preventDefault();  
-    console.log(person);
-    
-  }
+
+  const { register,handleSubmit }=useForm();
   
+  const onSubmit = (data)=>{console.log(data);
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit(onSubmit)}>
         <div className='mb-3'>
             <label htmlFor='name' className='form-lable'>
             Name :
             </label>
-            <input value={person.name} onChange={(event) => setPerson({...person,name:event.target.value })} id='name' type='text' className='form-control'>
+            <input {...register('name')} id='name' type='text' className='form-control'>
             </input>
         </div>
         <div className='mb-3'>
             <label htmlFor='age' className='form-lable'>
             Age :
             </label>
-            <input value={person.age} onChange={(event) => setPerson({...person,age:parseInt(event.target.value)})} id='age' type='number' className='form-control'>
+            <input {...register('age')} id='age' type='number' className='form-control'>
             </input>
         </div>
         <button className="btn" type='submit'>Submit</button>
