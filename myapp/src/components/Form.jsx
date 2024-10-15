@@ -10,7 +10,7 @@ const schema = z.object({
 
 const Form =  ()=>{
 
-  const { register,handleSubmit,formState : {errors} }=useForm({resolver:zodResolver(schema) });
+  const { register,handleSubmit,formState : {errors,isValid } }=useForm({resolver:zodResolver(schema) });
   
   const onSubmit = (data)=>console.log(data);
   
@@ -34,7 +34,7 @@ const Form =  ()=>{
             </input>
             {errors.age && <p>{errors.age.message}</p>}
         </div>
-        <button className="btn" type='submit'>Submit</button>
+        <button disabled={!isValid} className="btn" type='submit'>Submit</button>
     </form>
   )
 }
