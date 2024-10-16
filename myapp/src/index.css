@@ -41,7 +41,7 @@ input{
 }
 
 button{
-  width: 50%;
+  width: 100%;
   background-color: rgb(96, 96, 249);
   font-size: 20px;
   border: 1px;
@@ -49,4 +49,12 @@ button{
   justify-content: center;
   box-shadow: 0 0 0 0.5px;
   color: black;
+}
+
+table{
+  border: 2px solid black;
+  border-radius: 4px;
+}
+th{
+  border: 1px solid black;
 }
