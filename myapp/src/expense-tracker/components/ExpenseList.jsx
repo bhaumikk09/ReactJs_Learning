@@ -46,7 +46,7 @@ const expense= PropTypes.shape({
 
 ExpenseList.propTypes =
 {
-  expenses : PropTypes.arrayOf(expense),
+  expenses : PropTypes.arrayOf(expense).isRequired,
   onDelete : PropTypes.func.isRequired,
 };
 
