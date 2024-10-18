@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { categories } from '../../App'
+import categories from './categories'
 
 const ExpenseFilter = ({onSelectCategory}) => {
   return (
