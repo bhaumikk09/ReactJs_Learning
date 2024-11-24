@@ -20,15 +20,18 @@ export default function App() {
 
 const visibleExpenses = selectedCategory ? expenses.filter((e) => e.category === selectedCategory) : expenses ;
 
+console.log(categories);
+
+
   return (
         <div>
-          <div className="mb-5">
+             <div className="mb-5">
           <ExpenseForm categories={categories}/>
           </div>
           <div className="mb-3">
           <ExpenseFilter categories={categories} onSelectCategory={category => setSelectedCategory(category)}></ExpenseFilter>
-          </div> 
-          <ExpenseList expenses={visibleExpenses} onDelete={(id)=> setExpenses(expenses.filter(e => e.id !== id))}/>
+          </div>  
+          <ExpenseList categories={categories} expenses={visibleExpenses} onDelete={(id)=> setExpenses(expenses.filter(e => e.id !== id))}/>
         </div>
    
    );
